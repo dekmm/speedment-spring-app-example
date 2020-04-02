@@ -1,0 +1,1 @@
+# speedment-spring-app-sample
