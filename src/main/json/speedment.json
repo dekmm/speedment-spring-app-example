@@ -1,0 +1,3714 @@
+{
+  "config" : {
+    "speedmentVersion" : "Speedment:3.2.9-SNAPSHOT",
+    "nameProtected" : false,
+    "oasInfoContactEmail" : "",
+    "companyName" : "Speedment",
+    "oasInfoContactName" : "",
+    "packageLocation" : "src/main/java/",
+    "dbmses" : [
+      {
+        "nameProtected" : true,
+        "expanded" : true,
+        "port" : 3306,
+        "schemas" : [
+          {
+            "nameProtected" : true,
+            "tables" : [
+              {
+                "implements" : "",
+                "nameProtected" : true,
+                "restEnableGet" : true,
+                "restEnableCreate" : true,
+                "isView" : false,
+                "columns" : [
+                  {
+                    "nameProtected" : true,
+                    "nullable" : false,
+                    "autoIncrement" : true,
+                    "restUpdateBodyInclude" : false,
+                    "ordinalPosition" : 1,
+                    "enabled" : true,
+                    "restGetResponseInclude" : true,
+                    "databaseType" : "java.lang.Integer",
+                    "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "name" : "actor_id",
+                    "restCreateBodyInclude" : false,
+                    "nullableImplementation" : "OPTIONAL",
+                    "restUpdateBodyRequired" : true,
+                    "restCreateBodyRequired" : true,
+                    "id" : "actor_id",
+                    "restVisible" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "first_name",
+                    "id" : "first_name",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "last_name",
+                    "id" : "last_name",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  },
+                  {
+                    "nameProtected" : true,
+                    "nullable" : false,
+                    "autoIncrement" : false,
+                    "restUpdateBodyInclude" : true,
+                    "ordinalPosition" : 4,
+                    "enabled" : true,
+                    "restGetResponseInclude" : true,
+                    "databaseType" : "java.sql.Timestamp",
+                    "expanded" : true,
+                    "name" : "last_update",
+                    "restCreateBodyInclude" : true,
+                    "nullableImplementation" : "OPTIONAL",
+                    "restUpdateBodyRequired" : true,
+                    "restCreateBodyRequired" : true,
+                    "id" : "last_update",
+                    "restVisible" : false
+                  }
+                ],
+                "restEnableUpdate" : true,
+                "enabled" : true,
+                "restEnableFilters" : true,
+                "restEnableDelete" : true,
+                "expanded" : false,
+                "restEnabled" : true,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "actor_id",
+                    "id" : "actor_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "actor_id",
+                        "id" : "actor_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "idx_actor_last_name",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "last_name",
+                        "id" : "last_name",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "idx_actor_last_name",
+                    "enabled" : true
+                  }
+                ],
+                "name" : "actor",
+                "restPath" : "/actors",
+                "restEnableSkipLimit" : true,
+                "restCors" : "*",
+                "id" : "actor",
+                "restEnableSorters" : true,
+                "restEnableTotal" : false,
+                "restEnableList" : true
+              },
+              {
+                "implements" : "",
+                "nameProtected" : true,
+                "restEnableGet" : true,
+                "foreignKeys" : [
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "sakila",
+                        "foreignSchemaName" : "sakila",
+                        "expanded" : true,
+                        "name" : "actor_id",
+                        "foreignColumnName" : "actor_id",
+                        "id" : "actor_id",
+                        "foreignTableName" : "actor",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "actor_genre_ibfk_1",
+                    "id" : "actor_genre_ibfk_1",
+                    "enabled" : true
+                  }
+                ],
+                "restEnableCreate" : true,
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "actor_genre_id",
+                    "id" : "actor_genre_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "actor_id",
+                    "id" : "actor_id",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "name",
+                    "id" : "name",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  }
+                ],
+                "restEnableUpdate" : true,
+                "enabled" : true,
+                "restEnableFilters" : true,
+                "restEnableDelete" : true,
+                "expanded" : false,
+                "restEnabled" : false,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "actor_genre_id",
+                    "id" : "actor_genre_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "actor_genre_id",
+                        "id" : "actor_genre_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "actor_id",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "actor_id",
+                        "id" : "actor_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "actor_id",
+                    "enabled" : true
+                  }
+                ],
+                "name" : "actor_genre",
+                "restEnableSkipLimit" : true,
+                "restCors" : "*",
+                "id" : "actor_genre",
+                "restEnableSorters" : true,
+                "restEnableTotal" : false,
+                "restEnableList" : true
+              },
+              {
+                "implements" : "",
+                "nameProtected" : true,
+                "restEnableGet" : true,
+                "foreignKeys" : [
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "sakila",
+                        "foreignSchemaName" : "sakila",
+                        "expanded" : true,
+                        "name" : "city_id",
+                        "foreignColumnName" : "city_id",
+                        "id" : "city_id",
+                        "foreignTableName" : "city",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "fk_address_city",
+                    "id" : "fk_address_city",
+                    "enabled" : true
+                  }
+                ],
+                "restEnableCreate" : true,
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "autoIncrement" : true,
+                    "name" : "address_id",
+                    "id" : "address_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "address",
+                    "id" : "address",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "address2",
+                    "id" : "address2",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "district",
+                    "id" : "district",
+                    "ordinalPosition" : 4,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "city_id",
+                    "id" : "city_id",
+                    "ordinalPosition" : 5,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "postal_code",
+                    "id" : "postal_code",
+                    "ordinalPosition" : 6,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "phone",
+                    "id" : "phone",
+                    "ordinalPosition" : 7,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.sql.Timestamp",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "last_update",
+                    "id" : "last_update",
+                    "ordinalPosition" : 8,
+                    "enabled" : true
+                  }
+                ],
+                "restEnableUpdate" : true,
+                "enabled" : true,
+                "restEnableFilters" : true,
+                "restEnableDelete" : true,
+                "expanded" : false,
+                "restEnabled" : false,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "address_id",
+                    "id" : "address_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "address_id",
+                        "id" : "address_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "idx_fk_city_id",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "city_id",
+                        "id" : "city_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "idx_fk_city_id",
+                    "enabled" : true
+                  }
+                ],
+                "name" : "address",
+                "restEnableSkipLimit" : true,
+                "restCors" : "*",
+                "id" : "address",
+                "restEnableSorters" : true,
+                "restEnableTotal" : false,
+                "restEnableList" : true
+              },
+              {
+                "implements" : "",
+                "nameProtected" : true,
+                "restEnableGet" : true,
+                "restEnableCreate" : true,
+                "isView" : false,
+                "columns" : [
+                  {
+                    "nameProtected" : true,
+                    "nullable" : false,
+                    "autoIncrement" : true,
+                    "restUpdateBodyInclude" : false,
+                    "ordinalPosition" : 1,
+                    "enabled" : true,
+                    "restGetResponseInclude" : true,
+                    "databaseType" : "java.lang.Integer",
+                    "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "name" : "category_id",
+                    "restCreateBodyInclude" : false,
+                    "nullableImplementation" : "OPTIONAL",
+                    "restUpdateBodyRequired" : true,
+                    "restCreateBodyRequired" : true,
+                    "id" : "category_id",
+                    "restVisible" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "name",
+                    "id" : "name",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "nameProtected" : true,
+                    "nullable" : false,
+                    "autoIncrement" : false,
+                    "restUpdateBodyInclude" : true,
+                    "ordinalPosition" : 3,
+                    "enabled" : true,
+                    "restGetResponseInclude" : true,
+                    "databaseType" : "java.sql.Timestamp",
+                    "expanded" : true,
+                    "name" : "last_update",
+                    "restCreateBodyInclude" : true,
+                    "nullableImplementation" : "OPTIONAL",
+                    "restUpdateBodyRequired" : true,
+                    "restCreateBodyRequired" : true,
+                    "id" : "last_update",
+                    "restVisible" : false
+                  }
+                ],
+                "restEnableUpdate" : true,
+                "enabled" : true,
+                "restEnableFilters" : true,
+                "restEnableDelete" : true,
+                "expanded" : false,
+                "restEnabled" : true,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "category_id",
+                    "id" : "category_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "category_id",
+                        "id" : "category_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  }
+                ],
+                "name" : "category",
+                "restPath" : "/categories",
+                "restEnableSkipLimit" : true,
+                "restCors" : "*",
+                "id" : "category",
+                "restEnableSorters" : true,
+                "restEnableTotal" : false,
+                "restEnableList" : true
+              },
+              {
+                "implements" : "",
+                "nameProtected" : true,
+                "restEnableGet" : true,
+                "foreignKeys" : [
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "sakila",
+                        "foreignSchemaName" : "sakila",
+                        "expanded" : true,
+                        "name" : "country_id",
+                        "foreignColumnName" : "country_id",
+                        "id" : "country_id",
+                        "foreignTableName" : "country",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "fk_city_country",
+                    "id" : "fk_city_country",
+                    "enabled" : true
+                  }
+                ],
+                "restEnableCreate" : true,
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "autoIncrement" : true,
+                    "name" : "city_id",
+                    "id" : "city_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "city",
+                    "id" : "city",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "country_id",
+                    "id" : "country_id",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.sql.Timestamp",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "last_update",
+                    "id" : "last_update",
+                    "ordinalPosition" : 4,
+                    "enabled" : true
+                  }
+                ],
+                "restEnableUpdate" : true,
+                "enabled" : true,
+                "restEnableFilters" : true,
+                "restEnableDelete" : true,
+                "expanded" : false,
+                "restEnabled" : false,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "city_id",
+                    "id" : "city_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "city_id",
+                        "id" : "city_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "idx_fk_country_id",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "country_id",
+                        "id" : "country_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "idx_fk_country_id",
+                    "enabled" : true
+                  }
+                ],
+                "name" : "city",
+                "restEnableSkipLimit" : true,
+                "restCors" : "*",
+                "id" : "city",
+                "restEnableSorters" : true,
+                "restEnableTotal" : false,
+                "restEnableList" : true
+              },
+              {
+                "implements" : "",
+                "nameProtected" : true,
+                "restEnableGet" : true,
+                "restEnableCreate" : true,
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "autoIncrement" : true,
+                    "name" : "country_id",
+                    "id" : "country_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "country",
+                    "id" : "country",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.sql.Timestamp",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "last_update",
+                    "id" : "last_update",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  }
+                ],
+                "restEnableUpdate" : true,
+                "enabled" : true,
+                "restEnableFilters" : true,
+                "restEnableDelete" : true,
+                "expanded" : false,
+                "restEnabled" : false,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "country_id",
+                    "id" : "country_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "country_id",
+                        "id" : "country_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  }
+                ],
+                "name" : "country",
+                "restEnableSkipLimit" : true,
+                "restCors" : "*",
+                "id" : "country",
+                "restEnableSorters" : true,
+                "restEnableTotal" : false,
+                "restEnableList" : true
+              },
+              {
+                "implements" : "",
+                "nameProtected" : true,
+                "restEnableGet" : true,
+                "foreignKeys" : [
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "sakila",
+                        "foreignSchemaName" : "sakila",
+                        "expanded" : true,
+                        "name" : "address_id",
+                        "foreignColumnName" : "address_id",
+                        "id" : "address_id",
+                        "foreignTableName" : "address",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "fk_customer_address",
+                    "id" : "fk_customer_address",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "sakila",
+                        "foreignSchemaName" : "sakila",
+                        "expanded" : true,
+                        "name" : "store_id",
+                        "foreignColumnName" : "store_id",
+                        "id" : "store_id",
+                        "foreignTableName" : "store",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "fk_customer_store",
+                    "id" : "fk_customer_store",
+                    "enabled" : true
+                  }
+                ],
+                "restEnableCreate" : true,
+                "isView" : false,
+                "columns" : [
+                  {
+                    "nameProtected" : true,
+                    "nullable" : false,
+                    "autoIncrement" : true,
+                    "restUpdateBodyInclude" : false,
+                    "ordinalPosition" : 1,
+                    "enabled" : true,
+                    "restGetResponseInclude" : true,
+                    "databaseType" : "java.lang.Integer",
+                    "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "name" : "customer_id",
+                    "restCreateBodyInclude" : false,
+                    "nullableImplementation" : "OPTIONAL",
+                    "restUpdateBodyRequired" : true,
+                    "restCreateBodyRequired" : true,
+                    "id" : "customer_id",
+                    "restVisible" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "store_id",
+                    "id" : "store_id",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "first_name",
+                    "id" : "first_name",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "last_name",
+                    "id" : "last_name",
+                    "ordinalPosition" : 4,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "email",
+                    "id" : "email",
+                    "ordinalPosition" : 5,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "address_id",
+                    "id" : "address_id",
+                    "ordinalPosition" : 6,
+                    "enabled" : true
+                  },
+                  {
+                    "nameProtected" : true,
+                    "nullable" : false,
+                    "autoIncrement" : false,
+                    "restUpdateBodyInclude" : true,
+                    "ordinalPosition" : 7,
+                    "enabled" : true,
+                    "restGetResponseInclude" : true,
+                    "databaseType" : "java.lang.Boolean",
+                    "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "name" : "active",
+                    "restCreateBodyInclude" : true,
+                    "nullableImplementation" : "OPTIONAL",
+                    "restUpdateBodyRequired" : true,
+                    "restCreateBodyRequired" : true,
+                    "id" : "active",
+                    "restVisible" : true
+                  },
+                  {
+                    "nameProtected" : true,
+                    "nullable" : false,
+                    "autoIncrement" : false,
+                    "restUpdateBodyInclude" : true,
+                    "ordinalPosition" : 8,
+                    "enabled" : true,
+                    "restGetResponseInclude" : true,
+                    "databaseType" : "java.sql.Timestamp",
+                    "expanded" : true,
+                    "name" : "create_date",
+                    "restCreateBodyInclude" : true,
+                    "nullableImplementation" : "OPTIONAL",
+                    "restUpdateBodyRequired" : true,
+                    "restCreateBodyRequired" : true,
+                    "id" : "create_date",
+                    "restVisible" : false
+                  },
+                  {
+                    "nameProtected" : true,
+                    "nullable" : false,
+                    "autoIncrement" : false,
+                    "restUpdateBodyInclude" : true,
+                    "ordinalPosition" : 9,
+                    "enabled" : true,
+                    "restGetResponseInclude" : true,
+                    "databaseType" : "java.sql.Timestamp",
+                    "expanded" : true,
+                    "name" : "last_update",
+                    "restCreateBodyInclude" : true,
+                    "nullableImplementation" : "OPTIONAL",
+                    "restUpdateBodyRequired" : true,
+                    "restCreateBodyRequired" : true,
+                    "id" : "last_update",
+                    "restVisible" : false
+                  }
+                ],
+                "restEnableUpdate" : true,
+                "enabled" : true,
+                "restEnableFilters" : true,
+                "restEnableDelete" : true,
+                "expanded" : false,
+                "restEnabled" : true,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "customer_id",
+                    "id" : "customer_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "customer_id",
+                        "id" : "customer_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "idx_fk_address_id",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "address_id",
+                        "id" : "address_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "idx_fk_address_id",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "idx_fk_store_id",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "store_id",
+                        "id" : "store_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "idx_fk_store_id",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "idx_last_name",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "last_name",
+                        "id" : "last_name",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "idx_last_name",
+                    "enabled" : true
+                  }
+                ],
+                "name" : "customer",
+                "restPath" : "/customers",
+                "restEnableSkipLimit" : true,
+                "restCors" : "*",
+                "id" : "customer",
+                "restEnableSorters" : true,
+                "restEnableTotal" : false,
+                "restEnableList" : true
+              },
+              {
+                "implements" : "",
+                "nameProtected" : true,
+                "restEnableGet" : false,
+                "restEnableCreate" : true,
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Short",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "id",
+                    "id" : "id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.sql.Time",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "time",
+                    "id" : "time",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.sql.Timestamp",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "timestamp",
+                    "id" : "timestamp",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.sql.Date",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "date",
+                    "id" : "date",
+                    "ordinalPosition" : 4,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.sql.Timestamp",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "datetime",
+                    "id" : "datetime",
+                    "ordinalPosition" : 5,
+                    "enabled" : true
+                  }
+                ],
+                "restEnableUpdate" : false,
+                "enabled" : true,
+                "restEnableFilters" : true,
+                "restEnableDelete" : false,
+                "expanded" : false,
+                "restEnabled" : false,
+                "name" : "datetime",
+                "restEnableSkipLimit" : true,
+                "restCors" : "*",
+                "id" : "datetime",
+                "restEnableSorters" : true,
+                "restEnableTotal" : false,
+                "restEnableList" : true
+              },
+              {
+                "implements" : "",
+                "nameProtected" : true,
+                "restEnableGet" : true,
+                "foreignKeys" : [
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "sakila",
+                        "foreignSchemaName" : "sakila",
+                        "expanded" : true,
+                        "name" : "language_id",
+                        "foreignColumnName" : "language_id",
+                        "id" : "language_id",
+                        "foreignTableName" : "language",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "fk_film_language",
+                    "id" : "fk_film_language",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "sakila",
+                        "foreignSchemaName" : "sakila",
+                        "expanded" : true,
+                        "name" : "original_language_id",
+                        "foreignColumnName" : "language_id",
+                        "id" : "original_language_id",
+                        "foreignTableName" : "language",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "fk_film_language_original",
+                    "id" : "fk_film_language_original",
+                    "enabled" : true
+                  }
+                ],
+                "restEnableCreate" : true,
+                "isView" : false,
+                "columns" : [
+                  {
+                    "nameProtected" : true,
+                    "nullable" : false,
+                    "autoIncrement" : true,
+                    "restUpdateBodyInclude" : false,
+                    "ordinalPosition" : 1,
+                    "enabled" : true,
+                    "restGetResponseInclude" : true,
+                    "databaseType" : "java.lang.Integer",
+                    "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "name" : "film_id",
+                    "restCreateBodyInclude" : false,
+                    "nullableImplementation" : "OPTIONAL",
+                    "restUpdateBodyRequired" : true,
+                    "restCreateBodyRequired" : true,
+                    "id" : "film_id",
+                    "restVisible" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "title",
+                    "id" : "title",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "description",
+                    "id" : "description",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "release_year",
+                    "id" : "release_year",
+                    "ordinalPosition" : 4,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "language_id",
+                    "id" : "language_id",
+                    "ordinalPosition" : 5,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "original_language_id",
+                    "id" : "original_language_id",
+                    "ordinalPosition" : 6,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "rental_duration",
+                    "id" : "rental_duration",
+                    "ordinalPosition" : 7,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.math.BigDecimal",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "rental_rate",
+                    "id" : "rental_rate",
+                    "ordinalPosition" : 8,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "length",
+                    "id" : "length",
+                    "ordinalPosition" : 9,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.math.BigDecimal",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "replacement_cost",
+                    "id" : "replacement_cost",
+                    "ordinalPosition" : 10,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "enumConstants" : "G,PG,PG-13,R,NC-17",
+                    "name" : "rating",
+                    "id" : "rating",
+                    "ordinalPosition" : 11,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "special_features",
+                    "id" : "special_features",
+                    "ordinalPosition" : 12,
+                    "enabled" : true
+                  },
+                  {
+                    "nameProtected" : true,
+                    "nullable" : false,
+                    "autoIncrement" : false,
+                    "restUpdateBodyInclude" : true,
+                    "ordinalPosition" : 13,
+                    "enabled" : true,
+                    "restGetResponseInclude" : true,
+                    "databaseType" : "java.sql.Timestamp",
+                    "expanded" : true,
+                    "name" : "last_update",
+                    "restCreateBodyInclude" : true,
+                    "nullableImplementation" : "OPTIONAL",
+                    "restUpdateBodyRequired" : true,
+                    "restCreateBodyRequired" : true,
+                    "id" : "last_update",
+                    "restVisible" : false
+                  }
+                ],
+                "restEnableUpdate" : true,
+                "enabled" : true,
+                "restEnableFilters" : true,
+                "restEnableDelete" : true,
+                "expanded" : false,
+                "restEnabled" : true,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "film_id",
+                    "id" : "film_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "film_id",
+                        "id" : "film_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "idx_fk_language_id",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "language_id",
+                        "id" : "language_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "idx_fk_language_id",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "idx_fk_original_language_id",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "original_language_id",
+                        "id" : "original_language_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "idx_fk_original_language_id",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "idx_title",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "title",
+                        "id" : "title",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "idx_title",
+                    "enabled" : true
+                  }
+                ],
+                "name" : "film",
+                "restPath" : "/films",
+                "restEnableSkipLimit" : true,
+                "restCors" : "*",
+                "id" : "film",
+                "restEnableSorters" : true,
+                "restEnableTotal" : false,
+                "restEnableList" : true
+              },
+              {
+                "foreignKeys" : [
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "sakila",
+                        "foreignSchemaName" : "sakila",
+                        "expanded" : true,
+                        "name" : "actor_id",
+                        "foreignColumnName" : "actor_id",
+                        "id" : "actor_id",
+                        "foreignTableName" : "actor",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "fk_film_actor_actor",
+                    "id" : "fk_film_actor_actor",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "sakila",
+                        "foreignSchemaName" : "sakila",
+                        "expanded" : true,
+                        "name" : "film_id",
+                        "foreignColumnName" : "film_id",
+                        "id" : "film_id",
+                        "foreignTableName" : "film",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "fk_film_actor_film",
+                    "id" : "fk_film_actor_film",
+                    "enabled" : true
+                  }
+                ],
+                "expanded" : false,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "actor_id",
+                    "id" : "actor_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : true,
+                    "name" : "film_id",
+                    "id" : "film_id",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "actor_id",
+                        "id" : "actor_id",
+                        "ordinalPosition" : 1
+                      },
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "film_id",
+                        "id" : "film_id",
+                        "ordinalPosition" : 2
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "idx_fk_film_id",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "film_id",
+                        "id" : "film_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "idx_fk_film_id",
+                    "enabled" : true
+                  }
+                ],
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "actor_id",
+                    "id" : "actor_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "film_id",
+                    "id" : "film_id",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.sql.Timestamp",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "last_update",
+                    "id" : "last_update",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  }
+                ],
+                "name" : "film_actor",
+                "id" : "film_actor",
+                "enabled" : true
+              },
+              {
+                "foreignKeys" : [
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "sakila",
+                        "foreignSchemaName" : "sakila",
+                        "expanded" : true,
+                        "name" : "category_id",
+                        "foreignColumnName" : "category_id",
+                        "id" : "category_id",
+                        "foreignTableName" : "category",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "fk_film_category_category",
+                    "id" : "fk_film_category_category",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "sakila",
+                        "foreignSchemaName" : "sakila",
+                        "expanded" : true,
+                        "name" : "film_id",
+                        "foreignColumnName" : "film_id",
+                        "id" : "film_id",
+                        "foreignTableName" : "film",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "fk_film_category_film",
+                    "id" : "fk_film_category_film",
+                    "enabled" : true
+                  }
+                ],
+                "expanded" : false,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "category_id",
+                    "id" : "category_id",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : true,
+                    "name" : "film_id",
+                    "id" : "film_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "film_id",
+                        "id" : "film_id",
+                        "ordinalPosition" : 1
+                      },
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "category_id",
+                        "id" : "category_id",
+                        "ordinalPosition" : 2
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "fk_film_category_category",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "category_id",
+                        "id" : "category_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "fk_film_category_category",
+                    "enabled" : true
+                  }
+                ],
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "film_id",
+                    "id" : "film_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "category_id",
+                    "id" : "category_id",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.sql.Timestamp",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "last_update",
+                    "id" : "last_update",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  }
+                ],
+                "name" : "film_category",
+                "id" : "film_category",
+                "enabled" : true
+              },
+              {
+                "foreignKeys" : [
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "sakila",
+                        "foreignSchemaName" : "sakila",
+                        "expanded" : true,
+                        "name" : "film_id",
+                        "foreignColumnName" : "film_id",
+                        "id" : "film_id",
+                        "foreignTableName" : "film",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "film_comment_ibfk_1",
+                    "id" : "film_comment_ibfk_1",
+                    "enabled" : true
+                  }
+                ],
+                "expanded" : false,
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "film_id",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "film_id",
+                        "id" : "film_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "film_id",
+                    "enabled" : true
+                  }
+                ],
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "film_id",
+                    "id" : "film_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "comment",
+                    "id" : "comment",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  }
+                ],
+                "name" : "film_comment",
+                "id" : "film_comment",
+                "enabled" : true
+              },
+              {
+                "implements" : "",
+                "nameProtected" : true,
+                "restEnableGet" : false,
+                "foreignKeys" : [
+                  {
+                    "nameProtected" : true,
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "sakila",
+                        "foreignSchemaName" : "sakila",
+                        "expanded" : true,
+                        "name" : "film_id",
+                        "foreignColumnName" : "film_id",
+                        "id" : "film_id",
+                        "foreignTableName" : "film",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "film_genre_ibfk_1",
+                    "id" : "film_genre_ibfk_1",
+                    "enabled" : true
+                  }
+                ],
+                "restEnableCreate" : true,
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "nameProtected" : true,
+                    "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "nullable" : false,
+                    "autoIncrement" : false,
+                    "name" : "film_id",
+                    "nullableImplementation" : "OPTIONAL",
+                    "id" : "film_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "genre",
+                    "id" : "genre",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  }
+                ],
+                "restEnableUpdate" : false,
+                "enabled" : true,
+                "restEnableFilters" : true,
+                "restEnableDelete" : false,
+                "expanded" : false,
+                "restEnabled" : false,
+                "indexes" : [
+                  {
+                    "nameProtected" : true,
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "film_id",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "film_id",
+                        "id" : "film_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "film_id",
+                    "enabled" : true
+                  }
+                ],
+                "name" : "film_genre",
+                "restEnableSkipLimit" : true,
+                "restCors" : "*",
+                "id" : "film_genre",
+                "restEnableSorters" : true,
+                "restEnableTotal" : false,
+                "restEnableList" : true
+              },
+              {
+                "foreignKeys" : [
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "sakila",
+                        "foreignSchemaName" : "sakila",
+                        "expanded" : true,
+                        "name" : "film_id",
+                        "foreignColumnName" : "film_id",
+                        "id" : "film_id",
+                        "foreignTableName" : "film",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "film_image_ibfk_1",
+                    "id" : "film_image_ibfk_1",
+                    "enabled" : true
+                  }
+                ],
+                "expanded" : false,
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "film_id",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "film_id",
+                        "id" : "film_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "film_id",
+                    "enabled" : true
+                  }
+                ],
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "film_id",
+                    "id" : "film_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.sql.Blob",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "image",
+                    "id" : "image",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  }
+                ],
+                "name" : "film_image",
+                "id" : "film_image",
+                "enabled" : true
+              },
+              {
+                "foreignKeys" : [
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "sakila",
+                        "foreignSchemaName" : "sakila",
+                        "expanded" : true,
+                        "name" : "film_id",
+                        "foreignColumnName" : "film_id",
+                        "id" : "film_id",
+                        "foreignTableName" : "film",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "film_origin_ibfk_1",
+                    "id" : "film_origin_ibfk_1",
+                    "enabled" : true
+                  }
+                ],
+                "expanded" : false,
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "film_id",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "film_id",
+                        "id" : "film_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "film_id",
+                    "enabled" : true
+                  }
+                ],
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "film_id",
+                    "id" : "film_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "city",
+                    "id" : "city",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "country",
+                    "id" : "country",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  }
+                ],
+                "name" : "film_origin",
+                "id" : "film_origin",
+                "enabled" : true
+              },
+              {
+                "foreignKeys" : [
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "sakila",
+                        "foreignSchemaName" : "sakila",
+                        "expanded" : true,
+                        "name" : "film_id",
+                        "foreignColumnName" : "film_id",
+                        "id" : "film_id",
+                        "foreignTableName" : "film",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "film_rating_ibfk_1",
+                    "id" : "film_rating_ibfk_1",
+                    "enabled" : true
+                  }
+                ],
+                "expanded" : false,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "film_rating_id",
+                    "id" : "film_rating_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "film_rating_id",
+                        "id" : "film_rating_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "film_id",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "film_id",
+                        "id" : "film_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "film_id",
+                    "enabled" : true
+                  }
+                ],
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "film_rating_id",
+                    "id" : "film_rating_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "film_id",
+                    "id" : "film_id",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "stars",
+                    "id" : "stars",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  }
+                ],
+                "name" : "film_rating",
+                "id" : "film_rating",
+                "enabled" : true
+              },
+              {
+                "expanded" : false,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "film_id",
+                    "id" : "film_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "film_id",
+                        "id" : "film_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "idx_title_description",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "NONE",
+                        "expanded" : true,
+                        "name" : "title",
+                        "id" : "title",
+                        "ordinalPosition" : 1
+                      },
+                      {
+                        "orderType" : "NONE",
+                        "expanded" : true,
+                        "name" : "description",
+                        "id" : "description",
+                        "ordinalPosition" : 2
+                      }
+                    ],
+                    "id" : "idx_title_description",
+                    "enabled" : true
+                  }
+                ],
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Short",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "film_id",
+                    "id" : "film_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "title",
+                    "id" : "title",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "description",
+                    "id" : "description",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  }
+                ],
+                "name" : "film_text",
+                "id" : "film_text",
+                "enabled" : true
+              },
+              {
+                "implements" : "",
+                "nameProtected" : true,
+                "restEnableGet" : true,
+                "foreignKeys" : [
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "sakila",
+                        "foreignSchemaName" : "sakila",
+                        "expanded" : true,
+                        "name" : "film_id",
+                        "foreignColumnName" : "film_id",
+                        "id" : "film_id",
+                        "foreignTableName" : "film",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "fk_inventory_film",
+                    "id" : "fk_inventory_film",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "sakila",
+                        "foreignSchemaName" : "sakila",
+                        "expanded" : true,
+                        "name" : "store_id",
+                        "foreignColumnName" : "store_id",
+                        "id" : "store_id",
+                        "foreignTableName" : "store",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "fk_inventory_store",
+                    "id" : "fk_inventory_store",
+                    "enabled" : true
+                  }
+                ],
+                "restEnableCreate" : true,
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "autoIncrement" : true,
+                    "name" : "inventory_id",
+                    "id" : "inventory_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "film_id",
+                    "id" : "film_id",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "store_id",
+                    "id" : "store_id",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.sql.Timestamp",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "last_update",
+                    "id" : "last_update",
+                    "ordinalPosition" : 4,
+                    "enabled" : true
+                  }
+                ],
+                "restEnableUpdate" : true,
+                "enabled" : true,
+                "restEnableFilters" : true,
+                "restEnableDelete" : true,
+                "expanded" : false,
+                "restEnabled" : false,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "inventory_id",
+                    "id" : "inventory_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "inventory_id",
+                        "id" : "inventory_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "idx_fk_film_id",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "film_id",
+                        "id" : "film_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "idx_fk_film_id",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "idx_store_id_film_id",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "store_id",
+                        "id" : "store_id",
+                        "ordinalPosition" : 1
+                      },
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "film_id",
+                        "id" : "film_id",
+                        "ordinalPosition" : 2
+                      }
+                    ],
+                    "id" : "idx_store_id_film_id",
+                    "enabled" : true
+                  }
+                ],
+                "name" : "inventory",
+                "restEnableSkipLimit" : true,
+                "restCors" : "*",
+                "id" : "inventory",
+                "restEnableSorters" : true,
+                "restEnableTotal" : false,
+                "restEnableList" : true
+              },
+              {
+                "expanded" : false,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "language_id",
+                    "id" : "language_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "language_id",
+                        "id" : "language_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  }
+                ],
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "autoIncrement" : true,
+                    "name" : "language_id",
+                    "id" : "language_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "name",
+                    "id" : "name",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.sql.Timestamp",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "last_update",
+                    "id" : "last_update",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  }
+                ],
+                "name" : "language",
+                "id" : "language",
+                "enabled" : true
+              },
+              {
+                "implements" : "",
+                "nameProtected" : true,
+                "restEnableGet" : true,
+                "foreignKeys" : [
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "sakila",
+                        "foreignSchemaName" : "sakila",
+                        "expanded" : true,
+                        "name" : "customer_id",
+                        "foreignColumnName" : "customer_id",
+                        "id" : "customer_id",
+                        "foreignTableName" : "customer",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "fk_payment_customer",
+                    "id" : "fk_payment_customer",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "sakila",
+                        "foreignSchemaName" : "sakila",
+                        "expanded" : true,
+                        "name" : "rental_id",
+                        "foreignColumnName" : "rental_id",
+                        "id" : "rental_id",
+                        "foreignTableName" : "rental",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "fk_payment_rental",
+                    "id" : "fk_payment_rental",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "sakila",
+                        "foreignSchemaName" : "sakila",
+                        "expanded" : true,
+                        "name" : "staff_id",
+                        "foreignColumnName" : "staff_id",
+                        "id" : "staff_id",
+                        "foreignTableName" : "staff",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "fk_payment_staff",
+                    "id" : "fk_payment_staff",
+                    "enabled" : true
+                  }
+                ],
+                "restEnableCreate" : true,
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "autoIncrement" : true,
+                    "name" : "payment_id",
+                    "id" : "payment_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "customer_id",
+                    "id" : "customer_id",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "staff_id",
+                    "id" : "staff_id",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "rental_id",
+                    "id" : "rental_id",
+                    "ordinalPosition" : 4,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.math.BigDecimal",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "amount",
+                    "id" : "amount",
+                    "ordinalPosition" : 5,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.sql.Timestamp",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "payment_date",
+                    "id" : "payment_date",
+                    "ordinalPosition" : 6,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.sql.Timestamp",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "last_update",
+                    "id" : "last_update",
+                    "ordinalPosition" : 7,
+                    "enabled" : true
+                  }
+                ],
+                "restEnableUpdate" : true,
+                "enabled" : true,
+                "restEnableFilters" : true,
+                "restEnableDelete" : true,
+                "expanded" : false,
+                "restEnabled" : false,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "payment_id",
+                    "id" : "payment_id",
+                    "ordinalPosition" : 1
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "payment_id",
+                        "id" : "payment_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "fk_payment_rental",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "rental_id",
+                        "id" : "rental_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "fk_payment_rental",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "idx_fk_customer_id",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "customer_id",
+                        "id" : "customer_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "idx_fk_customer_id",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "idx_fk_staff_id",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "staff_id",
+                        "id" : "staff_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "idx_fk_staff_id"
+                  }
+                ],
+                "name" : "payment",
+                "restEnableSkipLimit" : true,
+                "restCors" : "*",
+                "id" : "payment",
+                "restEnableSorters" : true,
+                "restEnableTotal" : false,
+                "restEnableList" : true
+              },
+              {
+                "implements" : "",
+                "nameProtected" : true,
+                "restEnableGet" : true,
+                "foreignKeys" : [
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "sakila",
+                        "foreignSchemaName" : "sakila",
+                        "expanded" : true,
+                        "name" : "customer_id",
+                        "foreignColumnName" : "customer_id",
+                        "id" : "customer_id",
+                        "foreignTableName" : "customer",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "fk_rental_customer",
+                    "id" : "fk_rental_customer",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "sakila",
+                        "foreignSchemaName" : "sakila",
+                        "expanded" : true,
+                        "name" : "inventory_id",
+                        "foreignColumnName" : "inventory_id",
+                        "id" : "inventory_id",
+                        "foreignTableName" : "inventory",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "fk_rental_inventory",
+                    "id" : "fk_rental_inventory",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "sakila",
+                        "foreignSchemaName" : "sakila",
+                        "expanded" : true,
+                        "name" : "staff_id",
+                        "foreignColumnName" : "staff_id",
+                        "id" : "staff_id",
+                        "foreignTableName" : "staff",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "fk_rental_staff",
+                    "id" : "fk_rental_staff",
+                    "enabled" : true
+                  }
+                ],
+                "restEnableCreate" : true,
+                "isView" : false,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "autoIncrement" : true,
+                    "name" : "rental_id",
+                    "id" : "rental_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.sql.Timestamp",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "rental_date",
+                    "id" : "rental_date",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "inventory_id",
+                    "id" : "inventory_id",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "customer_id",
+                    "id" : "customer_id",
+                    "ordinalPosition" : 4,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.sql.Timestamp",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "return_date",
+                    "id" : "return_date",
+                    "ordinalPosition" : 5,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "staff_id",
+                    "id" : "staff_id",
+                    "ordinalPosition" : 6,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.sql.Timestamp",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "last_update",
+                    "id" : "last_update",
+                    "ordinalPosition" : 7,
+                    "enabled" : true
+                  }
+                ],
+                "restEnableUpdate" : true,
+                "enabled" : true,
+                "restEnableFilters" : true,
+                "restEnableDelete" : true,
+                "expanded" : false,
+                "restEnabled" : false,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "rental_id",
+                    "id" : "rental_id",
+                    "ordinalPosition" : 1
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "rental_id",
+                        "id" : "rental_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "rental_date",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "rental_date",
+                        "id" : "rental_date",
+                        "ordinalPosition" : 1
+                      },
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "customer_id",
+                        "id" : "customer_id",
+                        "ordinalPosition" : 3
+                      },
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "inventory_id",
+                        "id" : "inventory_id",
+                        "ordinalPosition" : 2
+                      }
+                    ],
+                    "id" : "rental_date",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "idx_fk_customer_id",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "customer_id",
+                        "id" : "customer_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "idx_fk_customer_id"
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "idx_fk_inventory_id",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "inventory_id",
+                        "id" : "inventory_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "idx_fk_inventory_id"
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "idx_fk_staff_id",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "staff_id",
+                        "id" : "staff_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "idx_fk_staff_id"
+                  }
+                ],
+                "name" : "rental",
+                "restEnableSkipLimit" : true,
+                "restCors" : "*",
+                "id" : "rental",
+                "restEnableSorters" : true,
+                "restEnableTotal" : false,
+                "restEnableList" : true
+              },
+              {
+                "implements" : "",
+                "nameProtected" : true,
+                "restEnableGet" : true,
+                "foreignKeys" : [
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "sakila",
+                        "foreignSchemaName" : "sakila",
+                        "expanded" : true,
+                        "name" : "address_id",
+                        "foreignColumnName" : "address_id",
+                        "id" : "address_id",
+                        "foreignTableName" : "address",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "fk_staff_address",
+                    "id" : "fk_staff_address",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "sakila",
+                        "foreignSchemaName" : "sakila",
+                        "expanded" : true,
+                        "name" : "store_id",
+                        "foreignColumnName" : "store_id",
+                        "id" : "store_id",
+                        "foreignTableName" : "store",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "fk_staff_store",
+                    "id" : "fk_staff_store",
+                    "enabled" : true
+                  }
+                ],
+                "restEnableCreate" : true,
+                "isView" : false,
+                "columns" : [
+                  {
+                    "nameProtected" : true,
+                    "nullable" : false,
+                    "autoIncrement" : true,
+                    "restUpdateBodyInclude" : false,
+                    "ordinalPosition" : 1,
+                    "enabled" : true,
+                    "restGetResponseInclude" : true,
+                    "databaseType" : "java.lang.Integer",
+                    "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "name" : "staff_id",
+                    "restCreateBodyInclude" : false,
+                    "nullableImplementation" : "OPTIONAL",
+                    "restUpdateBodyRequired" : true,
+                    "restCreateBodyRequired" : true,
+                    "id" : "staff_id",
+                    "restVisible" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "first_name",
+                    "id" : "first_name",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "last_name",
+                    "id" : "last_name",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "address_id",
+                    "id" : "address_id",
+                    "ordinalPosition" : 4,
+                    "enabled" : true
+                  },
+                  {
+                    "nameProtected" : true,
+                    "nullable" : true,
+                    "autoIncrement" : false,
+                    "restUpdateBodyInclude" : true,
+                    "ordinalPosition" : 5,
+                    "enabled" : true,
+                    "restGetResponseInclude" : true,
+                    "databaseType" : "java.sql.Blob",
+                    "expanded" : true,
+                    "name" : "picture",
+                    "restCreateBodyInclude" : true,
+                    "nullableImplementation" : "OPTIONAL",
+                    "restUpdateBodyRequired" : true,
+                    "restCreateBodyRequired" : true,
+                    "id" : "picture",
+                    "restVisible" : false
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "email",
+                    "id" : "email",
+                    "ordinalPosition" : 6,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "store_id",
+                    "id" : "store_id",
+                    "ordinalPosition" : 7,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Boolean",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "active",
+                    "id" : "active",
+                    "ordinalPosition" : 8,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "username",
+                    "id" : "username",
+                    "ordinalPosition" : 9,
+                    "enabled" : true
+                  },
+                  {
+                    "nameProtected" : true,
+                    "nullable" : true,
+                    "autoIncrement" : false,
+                    "restUpdateBodyInclude" : true,
+                    "ordinalPosition" : 10,
+                    "enabled" : true,
+                    "restGetResponseInclude" : true,
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "name" : "password",
+                    "restCreateBodyInclude" : true,
+                    "nullableImplementation" : "OPTIONAL",
+                    "restUpdateBodyRequired" : true,
+                    "restCreateBodyRequired" : true,
+                    "id" : "password",
+                    "restVisible" : false
+                  },
+                  {
+                    "nameProtected" : true,
+                    "nullable" : false,
+                    "autoIncrement" : false,
+                    "restUpdateBodyInclude" : true,
+                    "ordinalPosition" : 11,
+                    "enabled" : true,
+                    "restGetResponseInclude" : true,
+                    "databaseType" : "java.sql.Timestamp",
+                    "expanded" : true,
+                    "name" : "last_update",
+                    "restCreateBodyInclude" : true,
+                    "nullableImplementation" : "OPTIONAL",
+                    "restUpdateBodyRequired" : true,
+                    "restCreateBodyRequired" : true,
+                    "id" : "last_update",
+                    "restVisible" : false
+                  }
+                ],
+                "restEnableUpdate" : true,
+                "enabled" : true,
+                "restEnableFilters" : true,
+                "restEnableDelete" : true,
+                "expanded" : true,
+                "restEnabled" : true,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "staff_id",
+                    "id" : "staff_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "staff_id",
+                        "id" : "staff_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "idx_fk_address_id",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "address_id",
+                        "id" : "address_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "idx_fk_address_id",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "idx_fk_store_id",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "store_id",
+                        "id" : "store_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "idx_fk_store_id",
+                    "enabled" : true
+                  }
+                ],
+                "name" : "staff",
+                "restEnableSkipLimit" : true,
+                "restCors" : "*",
+                "id" : "staff",
+                "restEnableSorters" : true,
+                "restEnableTotal" : false,
+                "restEnableList" : true
+              },
+              {
+                "implements" : "",
+                "nameProtected" : true,
+                "restEnableGet" : true,
+                "foreignKeys" : [
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "sakila",
+                        "foreignSchemaName" : "sakila",
+                        "expanded" : true,
+                        "name" : "address_id",
+                        "foreignColumnName" : "address_id",
+                        "id" : "address_id",
+                        "foreignTableName" : "address",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "fk_store_address",
+                    "id" : "fk_store_address",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "foreignKeyColumns" : [
+                      {
+                        "foreignDatabaseName" : "sakila",
+                        "foreignSchemaName" : "sakila",
+                        "expanded" : true,
+                        "name" : "manager_staff_id",
+                        "foreignColumnName" : "staff_id",
+                        "id" : "manager_staff_id",
+                        "foreignTableName" : "staff",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "name" : "fk_store_staff",
+                    "id" : "fk_store_staff",
+                    "enabled" : true
+                  }
+                ],
+                "restEnableCreate" : true,
+                "isView" : false,
+                "columns" : [
+                  {
+                    "nameProtected" : true,
+                    "nullable" : false,
+                    "autoIncrement" : true,
+                    "restUpdateBodyInclude" : false,
+                    "ordinalPosition" : 1,
+                    "enabled" : true,
+                    "restGetResponseInclude" : true,
+                    "databaseType" : "java.lang.Integer",
+                    "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "name" : "store_id",
+                    "restCreateBodyInclude" : false,
+                    "nullableImplementation" : "OPTIONAL",
+                    "restUpdateBodyRequired" : true,
+                    "restCreateBodyRequired" : true,
+                    "id" : "store_id",
+                    "restVisible" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "manager_staff_id",
+                    "id" : "manager_staff_id",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "address_id",
+                    "id" : "address_id",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  },
+                  {
+                    "nameProtected" : true,
+                    "nullable" : false,
+                    "autoIncrement" : false,
+                    "restUpdateBodyInclude" : true,
+                    "ordinalPosition" : 4,
+                    "enabled" : true,
+                    "restGetResponseInclude" : true,
+                    "databaseType" : "java.sql.Timestamp",
+                    "expanded" : true,
+                    "name" : "last_update",
+                    "restCreateBodyInclude" : true,
+                    "nullableImplementation" : "OPTIONAL",
+                    "restUpdateBodyRequired" : true,
+                    "restCreateBodyRequired" : true,
+                    "id" : "last_update",
+                    "restVisible" : false
+                  }
+                ],
+                "restEnableUpdate" : true,
+                "enabled" : true,
+                "restEnableFilters" : true,
+                "restEnableDelete" : true,
+                "expanded" : true,
+                "restEnabled" : true,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "store_id",
+                    "id" : "store_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "idx_unique_manager",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "manager_staff_id",
+                        "id" : "manager_staff_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "idx_unique_manager",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "store_id",
+                        "id" : "store_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "PRIMARY",
+                    "enabled" : true
+                  },
+                  {
+                    "expanded" : false,
+                    "unique" : false,
+                    "name" : "idx_fk_address_id",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "address_id",
+                        "id" : "address_id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "id" : "idx_fk_address_id",
+                    "enabled" : true
+                  }
+                ],
+                "name" : "store",
+                "restPath" : "/stores",
+                "restEnableSkipLimit" : true,
+                "restCors" : "*",
+                "id" : "store",
+                "restEnableSorters" : true,
+                "restEnableTotal" : false,
+                "restEnableList" : true
+              },
+              {
+                "implements" : "",
+                "nameProtected" : true,
+                "restEnableGet" : false,
+                "restEnableCreate" : true,
+                "isView" : true,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "actor_id",
+                    "id" : "actor_id",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "first_name",
+                    "id" : "first_name",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "last_name",
+                    "id" : "last_name",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "film_info",
+                    "id" : "film_info",
+                    "ordinalPosition" : 4,
+                    "enabled" : true
+                  }
+                ],
+                "restEnableUpdate" : false,
+                "enabled" : true,
+                "restEnableFilters" : true,
+                "restEnableDelete" : false,
+                "expanded" : false,
+                "restEnabled" : false,
+                "name" : "actor_info",
+                "restEnableSkipLimit" : true,
+                "restCors" : "*",
+                "id" : "actor_info",
+                "restEnableSorters" : true,
+                "restEnableTotal" : false,
+                "restEnableList" : true
+              },
+              {
+                "implements" : "",
+                "nameProtected" : true,
+                "restEnableGet" : false,
+                "restEnableCreate" : true,
+                "isView" : true,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "ID",
+                    "id" : "ID",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "name",
+                    "id" : "name",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "address",
+                    "id" : "address",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "zip code",
+                    "id" : "zip code",
+                    "ordinalPosition" : 4,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "phone",
+                    "id" : "phone",
+                    "ordinalPosition" : 5,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "city",
+                    "id" : "city",
+                    "ordinalPosition" : 6,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "country",
+                    "id" : "country",
+                    "ordinalPosition" : 7,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "notes",
+                    "id" : "notes",
+                    "ordinalPosition" : 8,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "SID",
+                    "id" : "SID",
+                    "ordinalPosition" : 9,
+                    "enabled" : true
+                  }
+                ],
+                "restEnableUpdate" : false,
+                "enabled" : true,
+                "restEnableFilters" : true,
+                "restEnableDelete" : false,
+                "expanded" : false,
+                "restEnabled" : false,
+                "name" : "customer_list",
+                "restEnableSkipLimit" : true,
+                "restCors" : "*",
+                "id" : "customer_list",
+                "restEnableSorters" : true,
+                "restEnableTotal" : false,
+                "restEnableList" : true
+              },
+              {
+                "implements" : "",
+                "nameProtected" : true,
+                "restEnableGet" : false,
+                "restEnableCreate" : true,
+                "isView" : true,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "FID",
+                    "id" : "FID",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "title",
+                    "id" : "title",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "description",
+                    "id" : "description",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "category",
+                    "id" : "category",
+                    "ordinalPosition" : 4,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.math.BigDecimal",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "price",
+                    "id" : "price",
+                    "ordinalPosition" : 5,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "length",
+                    "id" : "length",
+                    "ordinalPosition" : 6,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "enumConstants" : "G,PG,PG-13,R,NC-17",
+                    "name" : "rating",
+                    "id" : "rating",
+                    "ordinalPosition" : 7,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "actors",
+                    "id" : "actors",
+                    "ordinalPosition" : 8,
+                    "enabled" : true
+                  }
+                ],
+                "restEnableUpdate" : false,
+                "enabled" : true,
+                "restEnableFilters" : true,
+                "restEnableDelete" : false,
+                "expanded" : false,
+                "restEnabled" : false,
+                "name" : "film_list",
+                "restEnableSkipLimit" : true,
+                "restCors" : "*",
+                "id" : "film_list",
+                "restEnableSorters" : true,
+                "restEnableTotal" : false,
+                "restEnableList" : true
+              },
+              {
+                "implements" : "",
+                "nameProtected" : true,
+                "restEnableGet" : false,
+                "restEnableCreate" : true,
+                "isView" : true,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "FID",
+                    "id" : "FID",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "title",
+                    "id" : "title",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "description",
+                    "id" : "description",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "category",
+                    "id" : "category",
+                    "ordinalPosition" : 4,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.math.BigDecimal",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "price",
+                    "id" : "price",
+                    "ordinalPosition" : 5,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "length",
+                    "id" : "length",
+                    "ordinalPosition" : 6,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "enumConstants" : "G,PG,PG-13,R,NC-17",
+                    "name" : "rating",
+                    "id" : "rating",
+                    "ordinalPosition" : 7,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "actors",
+                    "id" : "actors",
+                    "ordinalPosition" : 8,
+                    "enabled" : true
+                  }
+                ],
+                "restEnableUpdate" : false,
+                "enabled" : true,
+                "restEnableFilters" : true,
+                "restEnableDelete" : false,
+                "expanded" : false,
+                "restEnabled" : false,
+                "name" : "nicer_but_slower_film_list",
+                "restEnableSkipLimit" : true,
+                "restCors" : "*",
+                "id" : "nicer_but_slower_film_list",
+                "restEnableSorters" : true,
+                "restEnableTotal" : false,
+                "restEnableList" : true
+              },
+              {
+                "expanded" : false,
+                "isView" : true,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "category",
+                    "id" : "category",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.math.BigDecimal",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "total_sales",
+                    "id" : "total_sales",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  }
+                ],
+                "name" : "sales_by_film_category",
+                "id" : "sales_by_film_category",
+                "enabled" : true
+              },
+              {
+                "expanded" : false,
+                "isView" : true,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "store",
+                    "id" : "store",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "manager",
+                    "id" : "manager",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.math.BigDecimal",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "total_sales",
+                    "id" : "total_sales",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  }
+                ],
+                "name" : "sales_by_store",
+                "id" : "sales_by_store",
+                "enabled" : true
+              },
+              {
+                "expanded" : false,
+                "isView" : true,
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "ID",
+                    "id" : "ID",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "name",
+                    "id" : "name",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "address",
+                    "id" : "address",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : true,
+                    "name" : "zip code",
+                    "id" : "zip code",
+                    "ordinalPosition" : 4,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "phone",
+                    "id" : "phone",
+                    "ordinalPosition" : 5
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "city",
+                    "id" : "city",
+                    "ordinalPosition" : 6
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "country",
+                    "id" : "country",
+                    "ordinalPosition" : 7
+                  },
+                  {
+                    "databaseType" : "java.lang.Integer",
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "name" : "SID",
+                    "id" : "SID",
+                    "ordinalPosition" : 8
+                  }
+                ],
+                "name" : "staff_list",
+                "id" : "staff_list",
+                "enabled" : true
+              }
+            ],
+            "expanded" : true,
+            "restEnabled" : true,
+            "name" : "sakila",
+            "restPath" : "/",
+            "id" : "sakila",
+            "enabled" : true
+          }
+        ],
+        "typeName" : "MySQL",
+        "ipAddress" : "127.0.0.1",
+        "name" : "sakila",
+        "id" : "sakila",
+        "enabled" : true,
+        "username" : "root"
+      }
+    ],
+    "enabled" : true,
+    "oasInfoTitle" : "Speedment - Demo",
+    "oasInfoDescription" : "",
+    "expanded" : true,
+    "restEnabled" : true,
+    "oasInfoTos" : "",
+    "appId" : "f4a9a426-b277-41d0-adc1-9ecceee56fb6",
+    "name" : "Demo",
+    "id" : "sakila",
+    "restDocsEnabled" : true,
+    "oasInfoVersion" : "1.0.0",
+    "oasInfoContactUrl" : ""
+  }
+}

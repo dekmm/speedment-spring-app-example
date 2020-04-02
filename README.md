@@ -1,1 +1,1 @@
-# speedment-spring-app-sample
+# speedment-spring-app-example

@@ -1,0 +1,39 @@
+{
+  "properties": [
+    {
+      "name": "spring.speedment.url",
+      "type": "java.lang.String",
+      "description": "URL to use when connecting to the database."
+    },
+    {
+      "name": "spring.speedment.host",
+      "type": "java.lang.String",
+      "description": "IP address to use when connecting to the database."
+    },
+    {
+      "name": "spring.speedment.port",
+      "type": "java.lang.Integer",
+      "description": "Port to use when connecting to the database."
+    },
+    {
+      "name": "spring.speedment.username",
+      "type": "java.lang.String",
+      "description": "Username to use when connecting to the database."
+    },
+    {
+      "name": "spring.speedment.password",
+      "type": "java.lang.String",
+      "description": "Password to use when connecting to the database."
+    },
+    {
+      "name": "spring.speedment.license",
+      "type": "java.lang.String",
+      "description": "License key to use when connecting to the database."
+    },
+    {
+      "name": "spring.speedment.logging",
+      "type": "java.lang.Boolean",
+      "description": "Enable/disable logging for Speedment."
+    }
+  ]
+}
