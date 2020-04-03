@@ -7,4 +7,3 @@ services:
       - '3306:3306'
     expose:
       - '3306'
-    command: mysqld --sql_mode="ONLY_FULL_GROUP_BY"

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: speedment-spring-app
+  labels:
+    app: speedment-spring-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: speedment-spring-app
+  template:
+    metadata:
+      labels:
+        app: speedment-spring-app
+    spec:
+      containers:
+      - name: speedment-spring-app
+        image: speedment-spring-app-example
+        ports:
+        - name: rest
+          containerPort: 8080

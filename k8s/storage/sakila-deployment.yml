@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sakila
+  labels:
+    storage: sakila
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      storage: sakila
+  template:
+    metadata:
+      labels:
+        storage: sakila
+    spec:
+      containers:
+      - name: sakila
+        image: restsql/mysql-sakila
+        ports:
+        - containerPort: 3306

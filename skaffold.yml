@@ -1,0 +1,14 @@
+apiVersion: skaffold/v2alpha3
+kind: Config
+build:
+  artifacts:
+  - image: speedment-spring-app-example
+    docker:
+      dockerfile: Dockerfile
+      buildArgs:
+        JAR_LOCATION: ./target
+deploy:
+  kubectl:
+    manifests:
+    - k8s/app/*
+    - k8s/storage/*
