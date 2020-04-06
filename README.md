@@ -59,7 +59,7 @@ minikube start
 
 To check if the cluster is up and running, execute the following command:
 ```
-minikube start
+minikube status
 ```
 
 If the cluster started succesfully, you will see the following output:
