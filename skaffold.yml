@@ -5,8 +5,6 @@ build:
   - image: speedment-spring-app-example
     docker:
       dockerfile: Dockerfile
-      buildArgs:
-        JAR_LOCATION: ./target
 deploy:
   kubectl:
     manifests:
